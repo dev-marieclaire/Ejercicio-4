@@ -1,3 +1,3 @@
-public interface iPlanSuscripcion {
+public interface iPlanSuscripcion  {
     Double calcularCosto(Integer meses);
 }
