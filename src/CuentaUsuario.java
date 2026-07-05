@@ -1,18 +1,19 @@
 public abstract class CuentaUsuario implements iPlanSuscripcion {
-    private String correoelectronic;
-    private int mesesactivo;
+    private String eMail;
+    private Integer mesesActivo;
 
     // Añadiendo Plan dentro de la clase abstracta.
-    iPlanSuscripcion PlanSuscripcion;
+    iPlanSuscripcion planSuscripcion;
 
-    public CuentaUsuario(String correoelectronic, int mesesactivo, iPlanSuscripcion planSuscripcion) {
-        this.correoelectronic = correoelectronic;
-        this.mesesactivo = mesesactivo;
-        PlanSuscripcion = planSuscripcion;
+    public CuentaUsuario(String eMail, Integer mesesActivo, iPlanSuscripcion planSuscripcion)
+    {
+        this.eMail = eMail;
+        this.mesesActivo = mesesActivo;
+        this.planSuscripcion = planSuscripcion;
     }
 
     // Con este metodo luego le agregamos para que llame al ooooootro metodo
-    public void ObtenerTotalPagar (){
-
-    }
+    // Luego no, ahora
+    public void ObtenerTotalPagar()
+    { PlanSuscripcion.calcularCosto(); }
 }
