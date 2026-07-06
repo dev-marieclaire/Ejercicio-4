@@ -3,7 +3,7 @@ public abstract class CuentaUsuario {
     private Integer mesesActivo;
 
     // Añadiendo Plan dentro de la clase abstracta.
-    protected iPlanSuscripcion planSuscripcion;
+    private iPlanSuscripcion planSuscripcion;
 
     public CuentaUsuario(String eMail, Integer mesesActivo, iPlanSuscripcion planSuscripcion)
     {
@@ -15,7 +15,7 @@ public abstract class CuentaUsuario {
     // Con este metodo luego le agregamos para que llame al ooooootro metodo
     // Luego no, ahora
     public Double ObtenerTotalPagar()
-    { PlanSuscripcion.calcularCosto(this.mesesActivo); }
+    { return (Double) planSuscripcion.calcularCosto(this.mesesActivo); }
 
     public String geteMail() {
         return eMail;
