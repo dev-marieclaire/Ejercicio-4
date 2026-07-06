@@ -21,6 +21,8 @@ public abstract class CuentaUsuario {
         return eMail;
     }
 
+    //oye daniel y los cambios we
+
     public Integer getMesesActivo() {
         return mesesActivo;
     }
